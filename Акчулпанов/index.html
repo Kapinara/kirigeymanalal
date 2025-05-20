@@ -1,84 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Ак</title>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="form-box login">
-      <form action="">
-        <h1>Login</h1>
-        <div class="input-box">
-          <input type="text" placeholder="Username" required>
-          <i class='bx bxs-user'  ></i> 
-        </div>
-        <div class="input-box">
-          <input type="password" placeholder="Password" required>
-          <i class="bx bxs-lock-alt"></i>
-        </div>
-        <div class="forgot-link">
-          <a href="#">Forgot password</a>
-        </div>
-        <button type="submit" class="btn">Login</button>
-        <p>or Login with social platforms</p>
-
-        <div class="social-icons">
-          <a href="#"><i class="bx bxl-google"></i></a>
-          <a href="#"><i class="bx bxl-facebook"></i></a>
-          <a href="#"><i class="bx bxl-github"></i></a>
-          <a href="#"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/oathanrex/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="buttons">
+      <button id="login">Вход</button>
+      <button id="commentbtn">Комментарии</button>
     </div>
+    
 
-
-
-    <div class="form-box register">
-      <form action="">
-        <h1>Registration</h1>
-        <div class="input-box">
-          <input type="text" placeholder="Username" required>
-          <i class='bx bxs-user'></i> 
-        </div>
-        <div class="input-box">
-          <input type="email" placeholder="Email" required>
-          <i class='bx bxs-envelope'></i> 
-        </div>
-        <div class="input-box">
-          <input type="password" placeholder="Password" required>
-          <i class="bx bxs-lock-alt"></i>
-        </div>
-        <button type="submit" class="btn">Register</button>
-        <p>or Login with social platforms</p>
-        <div class="social-icons">
-          <a href="#"><i class="bx bxl-google"></i></a>
-          <a href="#"><i class="bx bxl-facebook"></i></a>
-          <a href="#"><i class="bx bxl-github"></i></a>
-          <a href="#"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </form>
-    </div>
-
-
-    <div class="toggle-box">
-      <div class="toggle-panel toggle-left">
-        <h1>Hello, Welcome!</h1>
-        <p>Don't have an account?</p>
-        <button class="btn register-btn">Register</button>
-      </div>
-      <div class="toggle-panel toggle-right">
-        <h1>Hello, Welcome!</h1>
-        <p>Already have an account?</p>
-        <button class="btn login-btn">Login</button>
+    <div class="modal-wrapper" id="loginModal">
+      <div class="modal">
+        <i class="fa-solid fa-xmark close" id="closeModal"></i>
+        <form action="#">
+          <p class="modal__title">Вход</p>
+          <label for="phone">Телефон</label> <br>
+          <input class="phone__input" type="tel" placeholder="Введите телефон" id="phone" />
+          <button type="submit" class="submit">Вход</button>
+          <div class="form-bottom">
+            <a href="#" class="register">Регистрация</a>
+            <a href="#" class="forgot-password">Забыли пароль?</a>
+          </div>
+        </form>
       </div>
     </div>
-  </div>
-  <script src="scipt.js"></script>
-</body>
+
+    <div class="modal-wrapper" id="commentModal">
+      <div class="modal modalComment">
+        <p class="modal__title">Комментарии</p>
+        <i class="fa-solid fa-xmark close" id="closeComment"></i>
+        <div class="comments">
+          <div class="comment">
+            <p class="author">Дмитрий (курьер) 21.01.2021</p>
+            <p class="comment__text">У клиента были гнилые половина помидоров. Он сказал возьмет их. Надо возместить бонусами.</p>
+          </div>
+          <div class="comment">
+            <p class="author">Аня (менеджер) 22.02.2021</p>
+            <p class="comment__text">Созвонились с клиентом. Я начислила 50 балов.</p>
+          </div>
+        </div>
+        <textarea type="text" class="comment__input"></textarea>
+        <button class="submit" type="submit">Отправить</button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>
-
